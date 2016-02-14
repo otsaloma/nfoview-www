@@ -22,15 +22,15 @@ push:
 	  $(error "Uncommited changes!"))
 	@echo "Uploading HTML files..."
 	aws s3 sync dist/ s3://otsaloma.io/nfoview/ \
-	 --exclude "*" \
-	 --include "*.html" \
-	 --acl public-read \
-	 --cache-control "public, max-age=300"
+	--exclude "*" \
+	--include "*.html" \
+	--acl public-read \
+	--cache-control "public, max-age=300"
 	@echo "Uploading everything else..."
 	aws s3 sync dist/ s3://otsaloma.io/nfoview/ \
-	 --exclude "*.html" \
-	 --acl public-read \
-	 --cache-control "public, max-age=86400"
+	--exclude "*.html" \
+	--acl public-read \
+	--cache-control "public, max-age=86400"
 	@echo "Listing remote files..."
 	aws s3 ls s3://otsaloma.io/nfoview/
 
