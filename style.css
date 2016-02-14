@@ -1,0 +1,132 @@
+/* -*- coding: utf-8-unix -*- */
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono:400);
+@import url(http://fonts.googleapis.com/css?family=Karla:400,700);
+
+html {
+  font-family: Karla,sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+  color: #404444;
+  font-family: Karla,sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 99%;
+  padding: 2rem;
+  text-align: left;
+  width: 52rem;
+}
+
+a {
+  color: #3465a4;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid #3465a4;
+  color: #3465a4;
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 16px !important;
+  border: none !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+
+.btn-lg {
+  border-radius: 21px !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+.btn:active, .btn:focus {
+  /* Use background colors instead of normal browser hints. */
+  border: none !important;
+  outline: none !important;
+}
+
+.btn-primary {
+  background-color: #4a90d9 !important;
+  color: white !important;
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: #5b9add !important;
+  color: white !important;
+}
+
+code {
+  font-family: "Droid Sans Mono",monospace;
+  font-size: 14px;
+}
+
+p {
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+header {
+  background: url(header.png) no-repeat center center;
+  height: 50px;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 630px) {
+  header {
+    background: url(header.png) no-repeat left center;
+  }
+}
+
+header {
+  /* http://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+#screenshot {
+  float: left;
+  /* img.height + 12 + 12 */
+  height: 361px;
+  margin-top: 9px;
+}
+
+@media (max-width: 630px) {
+  #screenshot {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+#screenshot img {
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+}
+
+.lb-outerContainer {
+  background-color: transparent;
+}
+
+#main {
+  /* img.width + 36 */
+  margin-left: 293px;
+}
+
+@media (max-width: 630px) {
+  #main {
+    float: left;
+    margin-left: 0;
+  }
+}
+
+.footer {
+  color: #888a85;
+}
