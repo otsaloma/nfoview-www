@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A simple viewer for NFO files, mainly targeted for Unix-like systems (GNU/Linux, *BSD, Solaris, etc).">
+    <meta name="description" content="A simple viewer for NFO files.">
     <title>NFO Viewer</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1">
@@ -13,42 +13,60 @@
     <link rel="stylesheet" href="style.css?v=1">
   </head>
   <body>
-    <header></header>
-    <main>
-      <aside id="screenshot">
-        <a href="screenshot-1.png?v=1" data-lightbox="screenshot">
-          <img src="screenshot-1s.png?v=1" width="257" height="337" alt="Screenshot">
-        </a>
-      </aside>
-      <div id="main">
-        <p>NFO Viewer is a simple viewer for <a href="https://en.wikipedia.org/wiki/.nfo"> NFO
-          files</a>, which are <a href="https://en.wikipedia.org/wiki/Ascii_art">
-          &ldquo;ASCII&rdquo; art</a> in the CP437 codepage. The advantages of using NFO Viewer
-          instead of a text editor are preset font and encoding settings, automatic window size
-          and clickable hyperlinks.</p>
-        <p>NFO Viewer should run on all major operating systems, but is primarily targeted for
-          Unix-like systems (GNU/Linux, &lowast;BSD, Solaris, etc). The user interface is based on
-          the GTK+ toolkit and has been designed to best fit the
-          <a href="https://www.gnome.org/">GNOME</a> desktop environment.</p>
-        <p>NFO Viewer is <a href="https://www.gnu.org/philosophy/free-sw.html">free software</a>
-          released under the <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public
-          License (GPL)</a>.</p>
-        <p>You should probably find NFO Viewer via your distro's package management as
-          &ldquo;nfoview&rdquo;, if not, get the source tarball below. The latest release
-          is <code>1.19</code>
-          (<a href="https://github.com/otsaloma/nfoview/releases">changes</a>).</p>
-        <p><a href="https://github.com/otsaloma/nfoview/archive/1.19.tar.gz"
-              class="btn btn-lg btn-primary" role="button">Download 1.19</a></p>
-        <p class="footer">
-          <a href="https://github.com/otsaloma/nfoview">Code</a> &middot;
-          <a href="https://github.com/otsaloma/nfoview/issues">Bugs</a> &middot;
-          <a href="https://gitter.im/otsaloma/nfoview">Discuss</a> &middot;
-          <a href="https://www.transifex.com/otsaloma/nfoview/">Translations</a><br>
-          NFO Viewer &copy; 2005–2016 Osmo Salomaa</p>
+    <div id="header" class="container-fluid section">
+      <img class="title" src="title.png" alt="NFO Viewer">
+      <p class="lead">A simple viewer for NFO files</p>
+      <p class="download source">
+        <a href="https://github.com/otsaloma/nfoview/archive/1.19.tar.gz"
+           class="btn btn-lg btn-primary"
+           role="button"><b>Download</b> nfoview-1.19.tar.gz</a>
+      </p>
+      <p class="download windows" style="display: none;">
+        <a href="https://github.com/otsaloma/nfoview/archive/XXX"
+           class="btn btn-lg btn-primary"
+           role="button"><b>Download</b> nfoview-XXX-win32.exe</a>
+      </p>
+      <p class="description">
+        <a href="https://github.com/otsaloma/nfoview/releases">
+          Release details and other downloads</a>
+      </p>
+      <a href="screenshot-1.png" class="image" data-lightbox="screenshots">
+        <img class="screenshot" src="screenshot-header.png" alt="Screenshot"></a>
+    </div>
+    <div id="features" class="container-fluid section">
+      <div class="row">
+        <div class="col col-xs-12 col-sm-6">
+          <h3>NFO &amp; ASCII</h3>
+          <p class="description">NFO Viewer is a simple viewer for
+            <a href="https://en.wikipedia.org/wiki/.nfo"> NFO files</a>, which are
+            <a href="https://en.wikipedia.org/wiki/Ascii_art"> &ldquo;ASCII&rdquo; art</a> in the
+            CP437 codepage. The advantages of using NFO Viewer instead of a text editor are preset
+            font and encoding settings, automatic window size and clickable hyperlinks.</p>
+        </div>
+        <div class="col col-xs-12 col-sm-6">
+          <h3>Open Source, Cross-Platform</h3>
+          <p class="description">NFO Viewer is
+            <a href="https://www.gnu.org/philosophy/free-sw.html">free software</a> released under
+            the <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public License</a>
+            (GPL). NFO Viewer should technically run on all major operating systems — though
+            practically Linux is best supported, Windows is beta-quality and use on Mac has not been
+            tested nor made convenient. NFO Viewer's user interface is based on the GTK+ toolkit and
+            has been designed to best fit the <a href="https://www.gnome.org/">GNOME</a> desktop
+            environment.</p>
+        </div>
       </div>
-    </main>
+    </div>
+    <div id="footer" class="container-fluid section">
+      <a href="https://gitter.im/otsaloma/nfoview">Discuss</a>
+      <a href="https://github.com/otsaloma/nfoview">Code</a>
+      <a href="https://github.com/otsaloma/nfoview/issues">Bugs</a>
+      <a href="http://www.transifex.com/otsaloma/nfoview/">Translations</a>
+      <p>Built and maintained by Osmo Salomaa</p>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.1/platform.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <script src="main.js?v=1"></script>
   </body>
 </html>

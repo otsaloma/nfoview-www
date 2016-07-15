@@ -1,7 +1,7 @@
 /* -*- coding: utf-8-unix -*- */
 
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono:400);
-@import url(http://fonts.googleapis.com/css?family=Karla:400,700);
+@import "https://fonts.googleapis.com/css?family=Karla:400,700";
+@import "https://fonts.googleapis.com/css?family=Droid+Sans+Mono:400";
 
 html {
   font-family: Karla,sans-serif;
@@ -9,17 +9,11 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: #f0e9df;
   color: #404444;
   font-family: Karla,sans-serif;
   font-size: 16px;
   line-height: 26px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 99%;
-  padding: 2rem;
-  text-align: left;
-  width: 52rem;
 }
 
 a {
@@ -28,22 +22,31 @@ a {
 }
 
 a:hover {
-  border-bottom: 1px solid #3465a4;
+  border-bottom: 2px solid #3465a4;
   color: #3465a4;
   text-decoration: none;
 }
+
+code {
+  font-family: "Droid Sans Mono",monospace;
+  font-size: 13px;
+}
+
+p {
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+/* Bootstrap */
 
 .btn {
   border-radius: 16px !important;
   border: none !important;
   font-size: 16px !important;
-  font-weight: bold !important;
 }
 
 .btn-lg {
   border-radius: 21px !important;
-  border: none !important;
-  font-weight: 600 !important;
 }
 
 .btn:active, .btn:focus {
@@ -62,71 +65,141 @@ a:hover {
   color: white !important;
 }
 
-code {
-  font-family: "Droid Sans Mono",monospace;
-  font-size: 14px;
+/* Lightbox */
+
+#lightbox a {
+  border-bottom: none !important;
 }
 
-p {
-  margin-bottom: 1em;
-  text-align: left;
+#lightbox .lb-container {
+  padding: 24px !important;
 }
 
-header {
-  background: url(header.png) no-repeat center center;
-  height: 50px;
-  margin-bottom: 2rem;
-  text-align: center;
-  width: 100%;
+#lightbox .lb-image {
+  background-color: rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
 }
 
-@media (max-width: 630px) {
-  header {
-    background: url(header.png) no-repeat left center;
+#lightbox .lb-number {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 30px !important;
+}
+
+/* Sections */
+
+.section {
+  margin: 0;
+  padding: 2rem 4rem;
+}
+
+@media (max-width: 500px),
+(max-height: 500px) {
+  .section {
+    padding: 1rem 1rem;
   }
 }
 
-header {
+.section > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+/* Header */
+
+#header {
+  background-color: #f0e9df;
+  box-shadow: 0px -82px 0px white inset;
+  padding-bottom: 0;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 500px),
+(max-height: 500px) {
+  #header {
+    box-shadow: 0px -58px 0px white inset;
+    padding-top: 2rem;
+  }
+}
+
+#header > * {
+  margin: 0;
+  text-align: center;
+}
+
+#header img.title {
   /* http://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering */
   image-rendering: -moz-crisp-edges;
   image-rendering: pixelated;
   -ms-interpolation-mode: nearest-neighbor;
 }
 
-#screenshot {
-  float: left;
-  /* img.height + 12 + 12 */
-  height: 361px;
-  margin-top: 9px;
+#header p {
+  margin: 1rem 0;
 }
 
-@media (max-width: 630px) {
-  #screenshot {
-    text-align: center;
-    width: 100%;
-  }
+#header .lead {
+  font-size: 24px;
+  font-weight: 400;
 }
 
-#screenshot img {
+#header .screenshot {
+  background-color: rgba(0,0,0,0.15);
   box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+  margin-top: 0.5rem;
+  max-width: 100%;
 }
 
-.lb-outerContainer {
-  background-color: transparent;
+/* Features */
+
+#features {
+  background-color: white;
+  padding-top: 3rem;
 }
 
-#main {
-  /* img.width + 36 */
-  margin-left: 293px;
-}
-
-@media (max-width: 630px) {
-  #main {
-    float: left;
-    margin-left: 0;
+@media (max-width: 500px),
+(max-height: 500px) {
+  #features {
+    padding-top: 2rem;
   }
 }
 
-.footer {
-  color: #888a85;
+#features > .row {
+  max-width: 680px;
+}
+
+#features h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 1rem 0;
+}
+
+/* Footer */
+
+#footer {
+  background-color: #f0e9df;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+#footer a {
+  color: #4a90d9;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#footer a:hover {
+  border-bottom: 3px solid #4a90d9;
+}
+
+#footer p {
+  margin-top: 1rem;
+  opacity: 0.7;
+  text-align: center;
 }

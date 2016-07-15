@@ -8,10 +8,10 @@ clean:
 dist:
 	$(MAKE) clean
 	mkdir dist
-	cp --preserve *.html *.css *.png *.ico dist
+	cp --preserve *.html *.js *.css *.png *.ico dist
 	optipng -preserve -quiet dist/*.png
-	sed -ri "s|\?v=1\"|?v=$(VERSION)\"|g" dist/*.html
-	$(if $(shell grep "?v=1" dist/*.html),$(error "v=1 remain!"))
+	sed -ri "s|\?v=1\"|?v=$(VERSION)\"|g" dist/*.html dist/*.js
+	$(if $(shell grep "?v=1" dist/*.html dist/*.js),$(error "v=1 remain!"))
 
 # All non-HTML resources are loaded with a version parameter thus
 # forcing browsers to fetch the resource again when a new version
