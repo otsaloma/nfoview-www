@@ -65,27 +65,6 @@ p {
   color: white !important;
 }
 
-/* Lightbox */
-
-#lightbox a {
-  border-bottom: none !important;
-}
-
-#lightbox .lb-container {
-  padding: 24px !important;
-}
-
-#lightbox .lb-image {
-  background-color: rgba(0,0,0,0.15);
-  box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
-}
-
-#lightbox .lb-number {
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  line-height: 30px !important;
-}
-
 /* Sections */
 
 .section {
