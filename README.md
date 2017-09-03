@@ -1,1 +1,1 @@
-NFO Viewer web pages: <http://otsaloma.io/nfoview/>
+NFO Viewer web pages: <https://otsaloma.io/nfoview/>
