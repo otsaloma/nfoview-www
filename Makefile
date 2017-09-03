@@ -31,6 +31,5 @@ push:
 	--acl public-read \
 	--cache-control "public, max-age=86400"
 	@echo "Listing remote files..."
-	aws s3 ls s3://otsaloma.io/nfoview/
 
 .PHONY: clean dist push
