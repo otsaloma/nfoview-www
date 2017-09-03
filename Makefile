@@ -15,6 +15,7 @@ dist:
 # All non-HTML resources are loaded with a version parameter thus
 # forcing browsers to fetch the resource again when a new version
 # is deployed on the server.
+
 push:
 	$(MAKE) dist
 	$(if $(shell git status --porcelain),\
@@ -24,12 +25,11 @@ push:
 	--exclude "*" \
 	--include "*.html" \
 	--acl public-read \
-	--cache-control "public, max-age=300"
+	--cache-control "public, max-age=3600"
 	@echo "Uploading everything else..."
 	aws s3 sync dist/ s3://otsaloma.io/nfoview/ \
 	--exclude "*.html" \
 	--acl public-read \
 	--cache-control "public, max-age=86400"
-	@echo "Listing remote files..."
 
 .PHONY: clean dist push
