@@ -1,4 +1,4 @@
-# -*- coding: us-ascii-unix -*-
+# -*- coding: utf-8-unix -*-
 
 VERSION = `date +%Y%m%d%H%M`
 
