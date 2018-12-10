@@ -1,7 +1,6 @@
 /* -*- coding: utf-8-unix -*- */
 
 @import "https://fonts.googleapis.com/css?family=Karla:400,700";
-@import "https://fonts.googleapis.com/css?family=Droid+Sans+Mono:400";
 
 html {
   font-family: Karla,sans-serif;
@@ -25,11 +24,6 @@ a:hover {
   border-bottom: 2px solid #3465a4;
   color: #3465a4;
   text-decoration: none;
-}
-
-code {
-  font-family: "Droid Sans Mono",monospace;
-  font-size: 13px;
 }
 
 p {
@@ -107,7 +101,6 @@ p {
 }
 
 #header img.title {
-  /* http://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering */
   image-rendering: -moz-crisp-edges;
   image-rendering: pixelated;
   -ms-interpolation-mode: nearest-neighbor;
