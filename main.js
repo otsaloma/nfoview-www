@@ -2,7 +2,7 @@
 
 $(document).on("ready", function() {
     if (platform.os.family.indexOf("Windows") === 0) {
-        $(".download.source").hide();
+        $(".download.linux").hide();
         $(".download.windows").show();
     }
 });
