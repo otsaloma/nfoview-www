@@ -82,7 +82,7 @@ p {
 /* Header */
 
 #header {
-  background-color: #f0e9df;
+  background: linear-gradient(180deg, #faf3e8, #f0e9df);
   box-shadow: 0px -82px 0px white inset;
   padding-bottom: 0;
   padding-top: 3rem;
