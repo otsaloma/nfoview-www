@@ -8,9 +8,9 @@ html {
 }
 
 body {
-  background-color: #f0e9df;
+  background-color: white;
   color: #404444;
-  font-family: Karla,sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 16px;
   line-height: 26px;
 }
@@ -83,7 +83,7 @@ p {
 
 #header {
   background: linear-gradient(180deg, #faf3e8, #f0e9df);
-  box-shadow: 0px -82px 0px white inset;
+  box-shadow: 0px -88px 0px white inset;
   padding-bottom: 0;
   padding-top: 3rem;
   text-align: center;
@@ -137,14 +137,14 @@ p {
 }
 
 #features > .row {
-  max-width: 680px;
+  max-width: 56em;
 }
 
 #features h3 {
   font-size: 18px;
   font-weight: 700;
-  text-align: left;
   margin: 0 0 1rem 0;
+  text-align: left;
 }
 
 /* Footer */

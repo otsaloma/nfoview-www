@@ -8,7 +8,7 @@ clean:
 dist:
 	$(MAKE) clean
 	mkdir dist
-	cp *.html *.js *.css *.png *.ico dist
+	cp *.css *.html *.ico *.js *.png *.svg dist
 	sed -ri "s|\?v=1\"|?v=$(VERSION)\"|g" dist/*.html dist/*.js
 	$(if $(shell grep "?v=1" dist/*.html dist/*.js),$(error "v=1 remain!"))
 
