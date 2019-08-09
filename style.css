@@ -83,15 +83,20 @@ p {
 
 #header {
   background: linear-gradient(180deg, #faf3e8, #f0e9df);
-  box-shadow: 0px -88px 0px white inset;
+  box-shadow: 0px -110px 0px white inset;
   padding-bottom: 0;
   padding-top: 3rem;
   text-align: center;
 }
 
+@media (max-width: 733px) {
+  #header {
+    box-shadow: 0px -15vw 0px white inset;
+  }
+}
+
 @media (max-width: 500px), (max-height: 500px) {
   #header {
-    box-shadow: 0px -58px 0px white inset;
     padding-top: 2rem;
   }
 }
@@ -150,8 +155,8 @@ p {
 /* Footer */
 
 #footer {
-  background-color: #f0e9df;
   padding-bottom: 4rem;
+  padding-top: 0;
   text-align: center;
 }
 
