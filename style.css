@@ -34,14 +34,10 @@ p {
 /* Bootstrap */
 
 .btn {
-  border-radius: 16px !important;
+  border-radius: 999px !important;
   border: none !important;
   font-size: 16px !important;
   margin: 8px !important;
-}
-
-.btn-lg {
-  border-radius: 21px !important;
 }
 
 .btn:active, .btn:focus {
