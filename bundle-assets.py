@@ -1,25 +1,25 @@
 #!/usr/bin/env python3
 
-import os
 import re
 import requests
 import sys
+
+from pathlib import Path
 
 ASSET_PATTERNS = {
     '<link rel="stylesheet" href="(.*?)">': '<style>{}</style>',
     '<script src="(.*?)"></script>': '<script>{}</script>',
 }
 
-def read_asset(directory, url):
-    if url.startswith("https://"):
-        return read_url(url)
-    return read_file(directory, url)
+def read_asset(directory, asset):
+    if asset.startswith("https://"):
+        return read_url(asset)
+    return read_file(directory, asset)
 
 def read_file(directory, fname):
-    fname = os.path.join(directory, fname)
     print("READ: {}".format(fname))
-    with open(fname, "r") as f:
-        return f.read().strip()
+    path = directory / fname
+    return path.read_text("utf-8").strip()
 
 def read_url(url):
     print("GET: {}".format(url))
@@ -29,17 +29,17 @@ def read_url(url):
 
 for fname in sys.argv[1:]:
     print("Processing {}...".format(fname))
-    directory = os.path.dirname(fname)
-    with open(fname, "r") as f:
-        lines = f.read().splitlines()
+    path = Path(fname)
+    directory = path.parent
+    lines = path.read_text("utf-8").splitlines()
     for i, line in enumerate(lines):
         for pattern, replacement in ASSET_PATTERNS.items():
             match = re.search(pattern, line)
             if match is None: continue
-            url = match.group(1).split("?")[0]
-            content = read_asset(directory, url)
+            asset = match.group(1).split("?")[0]
+            content = read_asset(directory, asset)
             content = replacement.format(content)
             a, z = match.span()
             lines[i] = line[:a] + content + line[z:]
-    with open(fname, "w") as f:
-        f.write("\n".join(lines) + "\n")
+    text = "\n".join(lines) + "\n"
+    path.write_text(text, "utf-8")
