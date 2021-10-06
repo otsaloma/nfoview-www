@@ -5,15 +5,7 @@ VERSION = `date +%Y%m%d%H%M`
 clean:
 	rm -rf dist
 
-dist:
-	$(MAKE) clean
-	mkdir dist
-	cp *.css *.html *.ico *.js *.png *.svg dist
-	sed -ri "s|\?v=dev\"|?v=$(VERSION)\"|g" dist/*.html dist/*.js
-	! grep "?v=dev" dist/*.html dist/*.js
-	./bundle-assets.py dist/*.html
-
-push:
+deploy:
 	$(MAKE) dist
 	$(if $(shell git status --porcelain),\
 	  $(error "Uncommited changes!"))
@@ -29,4 +21,12 @@ push:
 	--acl public-read \
 	--cache-control "public, max-age=86400"
 
-.PHONY: clean dist push
+dist:
+	$(MAKE) clean
+	mkdir dist
+	cp *.css *.html *.ico *.js *.png *.svg dist
+	sed -ri "s|\?v=dev\"|?v=$(VERSION)\"|g" dist/*.html dist/*.js
+	! grep "?v=dev" dist/*.html dist/*.js
+	./bundle-assets.py dist/*.html
+
+.PHONY: clean deploy dist
