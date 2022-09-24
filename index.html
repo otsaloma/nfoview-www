@@ -1,21 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A simple viewer for NFO files.">
     <title>NFO Viewer</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico?v=dev">
+    <link rel="icon" href="favicon.svg?v=dev">
+    <link rel="mask-icon" href="favicon-mask.svg?v=dev" color="#3584e4">
     <link rel="apple-touch-icon" href="apple-touch-icon.png?v=dev">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css?v=dev">
   </head>
   <body>
+    <div id="screenshot"></div>
     <div id="header" class="container-fluid section">
-      <img class="title" src="title.png" alt="NFO Viewer">
-      <p class="lead">A simple viewer for NFO files</p>
+      <h1>NFO Viewer</h1>
       <span class="download linux">
         <a href="https://flathub.org/apps/details/io.otsaloma.nfoview"
            class="btn btn-lg btn-primary"
@@ -26,38 +25,18 @@
            class="btn btn-lg btn-primary"
            role="button"><b>Get</b> Source 1.28.1</a>
       </span>
-      <span class="download windows" style="display: none;">
-        <a href="https://github.com/otsaloma/nfoview/releases/download/1.23/nfoview-1.23-win32.exe"
-           class="btn btn-lg btn-primary"
-           role="button"><b>Get</b> Installer 1.23</a>
-      </span>
       <p class="description">
-        <a href="https://github.com/otsaloma/nfoview/releases">
-          Release details and other downloads</a>
+        <a href="https://github.com/otsaloma/nfoview/releases">Release details</a>
       </p>
-      <a href="screenshot-1.png" class="image-popup">
-        <img class="screenshot"
-             src="screenshot-header.png"
-             srcset="screenshot-header@2x.png 2x"
-             alt="Screenshot"></a>
     </div>
     <div id="features" class="container-fluid section">
-      <div class="row">
-        <div class="col col-xs-12 col-sm-6">
-          <p class="description">NFO Viewer is a simple viewer for
-            <a href="https://en.wikipedia.org/wiki/.nfo"> NFO files</a>, which are
-            <a href="https://en.wikipedia.org/wiki/Ascii_art"> &ldquo;ASCII&rdquo; art</a> in the
-            CP437 codepage. The advantages of using NFO Viewer instead of a text editor are preset
-            font and encoding settings, automatic window size and clickable hyperlinks.</p>
-        </div>
-        <div class="col col-xs-12 col-sm-6">
-          <p class="description">NFO Viewer is available for Linux and Windows, released as Free
-            Software under the <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public
-              License</a> (GPL). NFO Viewer's user interface is based on the GTK 3 toolkit and has
-            been designed to best fit the <a href="https://www.gnome.org/">GNOME</a> desktop
-            environment.</p>
-        </div>
-      </div>
+      <p class="description">NFO Viewer is a simple viewer
+        for <a href="https://en.wikipedia.org/wiki/.nfo"> NFO files</a>, which
+        are <a href="https://en.wikipedia.org/wiki/Ascii_art"> &ldquo;ASCII&rdquo; art</a> in the
+        CP437 codepage. The advantages of using NFO Viewer instead of a text editor are preset font
+        and encoding settings, automatic window size and clickable hyperlinks. NFO Viewer is available
+        for Linux, released as Free Software under
+        the <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public License</a> (GPL).</p>
     </div>
     <div id="footer" class="container-fluid section">
       <a href="https://gitter.im/otsaloma/nfoview">Discuss</a>
@@ -66,10 +45,6 @@
       <a href="https://www.transifex.com/otsaloma/nfoview/">Translations</a>
       <p>Built and maintained by Osmo Salomaa</p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/platform@1.3.5/platform.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
-    <script src="main.js?v=dev"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

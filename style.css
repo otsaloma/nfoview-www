@@ -1,28 +1,43 @@
 /* -*- coding: utf-8-unix -*- */
 
-@import "https://fonts.googleapis.com/css?family=Karla:400,700";
+:root {
+  --color-background: white;
+  --color-link: #3584e4;
+  --color-text: #3d3846;
+  --font-family-sans-serif: "Avenir Next",
+                            -apple-system,
+                            "BlinkMacSystemFont",
+                            "Segoe UI",
+                            "Cantarell",
+                            "Ubuntu",
+                            "Oxygen",
+                            "Oxygen-Sans",
+                            "Roboto",
+                            "Droid Sans",
+                            "Open Sans",
+                            "Noto Sans",
+                            sans-serif;
+
+  --font-size-main: 16px;
+}
 
 html {
-  font-family: Karla,sans-serif;
-  font-size: 16px;
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--font-size-main);
 }
 
 body {
-  background-color: white;
-  color: #404444;
-  font-family: Karla, sans-serif;
-  font-size: 16px;
-  line-height: 26px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--font-size-main);
+  line-height: 1.5em;
+  text-rendering: optimizeLegibility;
 }
 
-a {
-  color: #3465a4;
-  text-decoration: none;
-}
-
-a:hover {
-  border-bottom: 2px solid #3465a4;
-  color: #3465a4;
+a, a:hover {
+  border-bottom: 2px solid var(--color-link);
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -40,19 +55,13 @@ p {
   margin: 8px !important;
 }
 
-.btn:active, .btn:focus {
-  /* Use background colors instead of normal browser hints. */
-  border: none !important;
-  outline: none !important;
-}
-
 .btn-primary {
-  background-color: #4a90d9 !important;
+  background-color: #4990e7 !important;
   color: white !important;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #5b9add !important;
+  background-color: #5798e7 !important;
   color: white !important;
 }
 
@@ -60,10 +69,10 @@ p {
 
 .section {
   margin: 0;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
 }
 
-@media (max-width: 500px), (max-height: 500px) {
+@media (max-width: 600px), (max-height: 600px) {
   .section {
     padding: 1rem 1rem;
   }
@@ -77,24 +86,22 @@ p {
 
 /* Header */
 
+#screenshot {
+  background: url("screenshot.jpg") no-repeat center top;
+  background-size: cover;
+  height: calc(584px / 2);
+  max-height: 50vh;
+}
+
+#screenshot-caption {
+  font-size: 12px;
+  margin: -32px 12px 0 12px;
+  opacity: 0.8;
+  text-align: right;
+}
+
 #header {
-  background: linear-gradient(180deg, #faf3e8, #f0e9df);
-  box-shadow: 0px -110px 0px white inset;
-  padding-bottom: 0;
-  padding-top: 3rem;
   text-align: center;
-}
-
-@media (max-width: 733px) {
-  #header {
-    box-shadow: 0px -15vw 0px white inset;
-  }
-}
-
-@media (max-width: 500px), (max-height: 500px) {
-  #header {
-    padding-top: 2rem;
-  }
 }
 
 #header > * {
@@ -102,50 +109,29 @@ p {
   text-align: center;
 }
 
-#header img.title {
-  image-rendering: -moz-crisp-edges;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
+#header h1 {
+  font-size: 64px;
+  font-weight: 900;
+  margin: 1rem 0;
+  text-transform: lowercase;
+}
+
+#header .download .btn b {
+  font-weight: 600;
 }
 
 #header p {
   margin: 1rem 0;
 }
 
-#header .lead {
-  font-size: 24px;
-  font-weight: 400;
-}
-
-#header .screenshot {
-  background-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-  margin-top: 0.5rem;
-  max-width: 100%;
-}
-
 /* Features */
 
 #features {
-  background-color: white;
-  padding-top: 3rem;
+  padding-top: 0;
 }
 
-@media (max-width: 500px), (max-height: 500px) {
-  #features {
-    padding-top: 2rem;
-  }
-}
-
-#features > .row {
-  max-width: 56em;
-}
-
-#features h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-  text-align: left;
+#features p {
+  max-width: 36em;
 }
 
 /* Footer */
@@ -157,20 +143,18 @@ p {
 }
 
 #footer a {
-  color: #4a90d9;
   font-size: 24px;
   font-weight: 700;
   line-height: 48px;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 1rem;
 }
 
-#footer a:hover {
+#footer a, #footer a:hover {
   border-bottom: 3px solid #4a90d9;
 }
 
 #footer p {
-  margin-top: 1rem;
+  margin-top: 2rem;
   opacity: 0.7;
   text-align: center;
 }

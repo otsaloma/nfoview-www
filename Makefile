@@ -1,14 +1,12 @@
 # -*- coding: utf-8-unix -*-
 
-VERSION = `date +%Y%m%d%H%M`
+VERSION = `date +%s`
 
 clean:
 	rm -rf dist
 
 deploy:
 	$(MAKE) dist
-	$(if $(shell git status --porcelain),\
-	  $(error "Uncommited changes!"))
 	@echo "Uploading HTML files..."
 	aws s3 sync dist/ s3://otsaloma.io/nfoview/ \
 	--exclude "*" \
@@ -24,9 +22,10 @@ deploy:
 dist:
 	$(MAKE) clean
 	mkdir dist
-	cp *.css *.html *.ico *.js *.png *.svg dist
-	sed -ri "s|\?v=dev\"|?v=$(VERSION)\"|g" dist/*.html dist/*.js
-	! grep "?v=dev" dist/*.html dist/*.js
+	cp *.css *.html *.jpg *.png *.svg dist
+	sed -ri "s|\?v=dev\"|?v=$(VERSION)\"|g" dist/*.html
+	! grep "?v=dev" dist/*.html
 	./bundle-assets.py dist/*.html
+	rm dist/*.css
 
 .PHONY: clean deploy dist
