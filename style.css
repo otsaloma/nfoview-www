@@ -88,7 +88,7 @@ p {
 
 #screenshot {
   background: url("screenshot.jpg") no-repeat center top;
-  background-size: cover;
+  background-size: calc(3840px / 2);
   height: calc(584px / 2);
   max-height: 50vh;
 }
