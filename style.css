@@ -45,6 +45,10 @@ p {
   background-color: #5798e7;
 }
 
+.button b {
+  font-weight: 600;
+}
+
 /* Sections */
 
 .section {
@@ -83,10 +87,6 @@ p {
   line-height: 1.2;
   margin: 1rem 0;
   text-transform: lowercase;
-}
-
-#header .download .button b {
-  font-weight: 600;
 }
 
 #header p {
