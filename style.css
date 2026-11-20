@@ -19,7 +19,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a, a:hover {
+a {
   border-bottom: 2px solid var(--color-link);
   color: var(--color-link);
   text-decoration: none;
@@ -32,7 +32,7 @@ p {
 
 /* Buttons */
 
-.button, .button:hover {
+.button {
   background-color: #4990e7;
   border: none;
   border-radius: 999px;
@@ -125,14 +125,11 @@ p {
 }
 
 #footer a {
+  border-bottom: 3px solid #4a90d9;
   font-size: 24px;
   font-weight: 700;
   line-height: 48px;
   margin: 0 1rem;
-}
-
-#footer a, #footer a:hover {
-  border-bottom: 3px solid #4a90d9;
 }
 
 #footer p {
