@@ -27,7 +27,6 @@ a {
 
 p {
   margin: 0 0 1em 0;
-  text-align: left;
 }
 
 /* Buttons */
@@ -78,11 +77,6 @@ p {
   text-align: center;
 }
 
-#header > * {
-  margin: 0;
-  text-align: center;
-}
-
 #header h1 {
   font-size: 64px;
   font-weight: 900;
@@ -130,5 +124,4 @@ p {
 #footer p {
   margin-top: 2rem;
   opacity: 0.7;
-  text-align: center;
 }
