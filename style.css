@@ -70,13 +70,6 @@ p {
   max-height: 50vh;
 }
 
-#screenshot-caption {
-  font-size: 12px;
-  margin: -32px 12px 0 12px;
-  opacity: 0.8;
-  text-align: right;
-}
-
 #header {
   text-align: center;
 }
